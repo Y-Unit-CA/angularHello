@@ -9,7 +9,7 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
       { id: 12, name: 'Dr. Nice' },
-      { id: 13, name: 'Bombasto' },
+      { id: 13, name: 'Bombasta' },
       { id: 14, name: 'Celeritas' },
       { id: 15, name: 'Magneta' },
       { id: 16, name: 'RubberMan' },
@@ -29,4 +29,14 @@ export class InMemoryDataService implements InMemoryDbService {
   genId(heroes: Hero[]): number {
     return heroes.length > 0 ? Math.max(...heroes.map(hero => hero.id)) + 1 : 11;
   }
+  /*
+  Ternary operator:
+    test_boolean_expression ? value_if_true : value_if_false;
+
+  if (heroes.length > 0) {
+    return Math.max(...heroes.map(hero => hero.id)) + 1;
+  } else {
+
+  }
+  */
 }
